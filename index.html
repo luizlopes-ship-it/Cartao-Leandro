@@ -23,14 +23,14 @@
             background: #ffffff;
             border-radius: 24px;
             box-shadow: 0 15px 35px rgba(2, 132, 199, 0.15);
-            max-width: 380px;
+            max-width: 400px;
             width: 100%;
-            padding: 35px 25px;
+            padding: 35px 20px;
             text-align: center;
             border: 1px solid #bae6fd;
         }
         .logo-container {
-            margin-bottom: 15px;
+            margin-bottom: 5px;
         }
         .logo {
             font-size: 28px;
@@ -46,26 +46,54 @@
             text-transform: uppercase;
             margin-top: 2px;
         }
+        
         .profile-img {
-            width: 130px;
-            height: 130px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #0284c7;
-            margin: 15px auto 12px auto;
+            border: 5px solid #0284c7;
+            margin: 20px auto 15px auto;
             display: block;
-            box-shadow: 0 6px 15px rgba(2, 132, 199, 0.25);
+            box-shadow: 0 8px 24px rgba(2, 132, 199, 0.35), 0 0 0 6px rgba(224, 242, 254, 0.8);
+            transition: transform 0.3s ease;
         }
+
+        /* Animação de Salto Contínua e Infinita */
         .profile-name {
-            font-size: 22px;
+            font-size: 24px;
             color: #0f172a;
-            font-weight: 700;
-            margin-bottom: 4px;
+            font-weight: 800;
+            margin-bottom: 2px;
+            display: inline-block;
+            animation: salteEfeito 1s ease-in-out infinite alternate;
+            -webkit-animation: salteEfeito 1s ease-in-out infinite alternate;
         }
+
+        @keyframes salteEfeito {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-12px);
+                color: #0284c7;
+            }
+        }
+
+        @-webkit-keyframes salteEfeito {
+            0% {
+                -webkit-transform: translateY(0);
+            }
+            100% {
+                -webkit-transform: translateY(-12px);
+                color: #0284c7;
+            }
+        }
+
         .profile-role {
             font-size: 14px;
             color: #64748b;
-            margin-bottom: 25px;
+            margin-bottom: 22px;
         }
         .btn-whatsapp {
             display: flex;
@@ -77,9 +105,9 @@
             font-size: 16px;
             font-weight: 700;
             text-decoration: none;
-            padding: 16px 20px;
+            padding: 16px;
             border-radius: 14px;
-            margin-bottom: 25px;
+            margin-bottom: 22px;
             box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
             transition: all 0.2s ease;
         }
@@ -87,20 +115,50 @@
             background-color: #20ba5a;
             transform: translateY(-2px);
         }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 22px;
+        }
+        .service-item {
+            background-color: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 10px;
+            padding: 10px 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .service-icon {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+        .service-text {
+            font-size: 10px;
+            font-weight: 700;
+            color: #0369a1;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
         .contact-list {
             list-style: none;
             text-align: left;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
         }
         .contact-item {
             display: flex;
             align-items: center;
             gap: 12px;
-            font-size: 14px;
-            padding: 10px 12px;
-            border-radius: 10px;
+            font-size: 13px;
+            padding: 9px 12px;
+            border-radius: 8px;
             background-color: #f8fafc;
             border: 1px solid #e2e8f0;
         }
@@ -120,37 +178,53 @@
             <div class="subtitle">Ar-Condicionado & Soluções</div>
         </div>
 
-        <!-- Foto do Vendedor enviada -->
-           <img src="foto-leandro.jpeg" alt="Leandro Guimarães" class="profile-img">
+        <img src="foto-leandro.jpeg" alt="Leandro Guimarães" class="profile-img">
 
         <h1 class="profile-name">Leandro Guimarães</h1>
         <p class="profile-role">Vendedor Especialista</p>
 
-        <!-- Botão WhatsApp Clicável -->
         <a href="https://wa.me/5521995813821?text=Ol%C3%A1%20Leandro,%20vim%20pelo%20seu%20cart%C3%A3o%20digital!" class="btn-whatsapp" target="_blank">
             <span>💬</span> Clique aqui e Fale no WhatsApp
         </a>
 
-        <!-- Lista de Contatos -->
+        <div class="services-grid">
+            <div class="service-item">
+                <span class="service-icon">❄️</span>
+                <span class="service-text">Ar-Condicionado<br>Split e Janela</span>
+            </div>
+            <div class="service-item">
+                <span class="service-icon">🛠️</span>
+                <span class="service-text">Instalação e<br>Manutenção</span>
+            </div>
+            <div class="service-item">
+                <span class="service-icon">⚙️</span>
+                <span class="service-text">Peças e<br>Acessórios</span>
+            </div>
+            <div class="service-item">
+                <span class="service-icon">🏢</span>
+                <span class="service-text">Linha Comercial<br>e Residencial</span>
+            </div>
+        </div>
+
         <ul class="contact-list">
             <li class="contact-item">
                 <span>📱</span>
                 <div>
-                    <span style="color: #64748b; font-size: 12px; display: block;">Telefone / Celular</span>
+                    <span style="color: #64748b; font-size: 11px; display: block;">Telefone / Celular</span>
                     <a href="tel:5521995813821">(21) 99581-3821</a>
                 </div>
             </li>
             <li class="contact-item">
                 <span>📷</span>
                 <div>
-                    <span style="color: #64748b; font-size: 12px; display: block;">Instagram</span>
+                    <span style="color: #64748b; font-size: 11px; display: block;">Instagram</span>
                     <a href="https://instagram.com/leandroayra.ar" target="_blank">@leandroayra.ar</a>
                 </div>
             </li>
             <li class="contact-item">
                 <span>✉️</span>
                 <div>
-                    <span style="color: #64748b; font-size: 12px; display: block;">E-mail</span>
+                    <span style="color: #64748b; font-size: 11px; display: block;">E-mail</span>
                     <a href="mailto:leandro.guimaraes@friopecas.com.br">leandro.guimaraes@friopecas.com.br</a>
                 </div>
             </li>
